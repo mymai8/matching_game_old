@@ -89,3 +89,41 @@ Did you mean?  action_text/attachables/remote_image
     5:     </div>
   
 app/views/devise/registrations/new.html.erb:2
+Started GET "/users/sign_up" for ::1 at 2023-12-11 14:38:35 +0900
+Processing by Devise::RegistrationsController#new as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 598)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-12-11 14:38:42 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 59.5ms | Allocations: 2283)
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 2366)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.1ms | Allocations: 6917)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/maiko/matching_game/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actiontext-7.0.8/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actionmailbox-7.0.8/app/views"
+
+Did you mean?  action_text/attachables/remote_image
+               devise/shared/error_messages
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               layouts/action_text/contents/content):
+    1: <div class="wrapper">
+    2:   <%= render "shared/header" %>
+    3:     <div class="side-bar">
+    4:       <%= render "shared/side_bar" %>
+    5:     </div>
+  
+app/views/devise/registrations/new.html.erb:2
