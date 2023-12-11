@@ -82,3 +82,79 @@ Processing by CoachesController#index as HTML
 Completed 200 OK in 293ms (Views: 261.4ms | ActiveRecord: 0.0ms | Allocations: 46455)
 
 
+Started GET "/" for ::1 at 2023-12-11 13:49:30 +0900
+Processing by CoachesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coaches/index.html.erb within layouts/application
+  Rendered coaches/index.html.erb within layouts/application (Duration: 368.0ms | Allocations: 9551)
+  Rendered layout layouts/application.html.erb (Duration: 369.7ms | Allocations: 9643)
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 0.0ms | Allocations: 10875)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/maiko/matching_game/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actiontext-7.0.8/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actionmailbox-7.0.8/app/views"
+
+Did you mean?  action_text/attachables/remote_image
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               layouts/action_text/contents/content
+               active_storage/blobs/blob):
+    1: <div class="wrapper">
+    2:   <%= render "shared/header" %>
+    3:     <div class="side-bar">
+    4:       <%= render "shared/side_bar" %>
+    5:     </div>
+  
+app/views/coaches/index.html.erb:2
+Started GET "/" for ::1 at 2023-12-11 14:09:28 +0900
+Processing by CoachesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coaches/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 22.2ms | Allocations: 3323)
+  Rendered coaches/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 4357)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 4447)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms | Allocations: 12163)
+
+
+  
+ActionView::Template::Error (The asset "matching-logo.png" is not present in the asset pipeline.
+):
+    1: <%# CSS・・・assets/stylesheets/shared/header.css %>
+    2: <header class='header'>
+    3:   <div class='logo'>
+    4:     <%= link_to image_tag("matching-logo.png", class:"matching-icon"), "/" %>
+    5:   </div>
+    6:   <div class='nav'>
+    7:     <ul class='lists'>
+  
+app/views/shared/_header.html.erb:4
+app/views/coaches/index.html.erb:2
+Started GET "/" for ::1 at 2023-12-11 14:11:34 +0900
+Processing by CoachesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering coaches/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 466.9ms | Allocations: 35325)
+  Rendered coaches/index.html.erb within layouts/application (Duration: 468.2ms | Allocations: 35389)
+  Rendered layout layouts/application.html.erb (Duration: 469.5ms | Allocations: 35463)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 0.0ms | Allocations: 35807)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000b590>):
+     5:   </div>
+     6:   <div class='nav'>
+     7:     <ul class='lists'>
+     8:       <% if user_signed_in? %>
+     9:         <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
+    10:         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    11:         <li><%= link_to 'コーチ登録', new_coach_path, class: "new-coach" %></li>
+  
+app/views/shared/_header.html.erb:8
+app/views/coaches/index.html.erb:2
