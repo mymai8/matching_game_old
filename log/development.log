@@ -1,0 +1,91 @@
+  [1m[35m (19.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20231211052246)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nickname" varchar NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "game_name" varchar NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231211052246"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-12-11 05:24:35.795129"], ["updated_at", "2023-12-11 05:24:35.795129"]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2023-12-11 14:25:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views/devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 300)
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views/devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 789)
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 92.7ms | Allocations: 6632)
+  Rendered layout layouts/application.html.erb (Duration: 970.1ms | Allocations: 111290)
+Completed 200 OK in 1272ms (Views: 1180.2ms | ActiveRecord: 1.6ms | Allocations: 141463)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-12-11 14:29:24 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 371.9ms | Allocations: 11198)
+  Rendered layout layouts/application.html.erb (Duration: 373.2ms | Allocations: 11290)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 0.0ms | Allocations: 12994)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/maiko/matching_game/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actiontext-7.0.8/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actionmailbox-7.0.8/app/views"
+
+Did you mean?  action_text/attachables/remote_image
+               devise/shared/error_messages
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               layouts/action_text/contents/content):
+    1: <div class="wrapper">
+    2:   <%= render "shared/header" %>
+    3:     <div class="side-bar">
+    4:       <%= render "shared/side_bar" %>
+    5:     </div>
+  
+app/views/devise/registrations/new.html.erb:2
+Started GET "/users/sign_up" for ::1 at 2023-12-11 14:33:19 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 73.3ms | Allocations: 2943)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 3026)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms | Allocations: 4707)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/maiko/matching_game/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/devise-4.9.3/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/turbo-rails-1.5.0/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actiontext-7.0.8/app/views"
+  * "C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/actionmailbox-7.0.8/app/views"
+
+Did you mean?  action_text/attachables/remote_image
+               devise/shared/error_messages
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               layouts/action_text/contents/content):
+    1: <div class="wrapper">
+    2:   <%= render "shared/header" %>
+    3:     <div class="side-bar">
+    4:       <%= render "shared/side_bar" %>
+    5:     </div>
+  
+app/views/devise/registrations/new.html.erb:2
