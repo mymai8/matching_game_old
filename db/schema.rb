@@ -10,7 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_11_052246) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_12_053648) do
+  create_table "coaches", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "rank_id", null: false
+    t.string "kill_rate", null: false
+    t.text "character", null: false
+    t.string "play_style"
+    t.string "play_time", null: false
+    t.text "play_device", null: false
+    t.text "communication_tool", null: false
+    t.string "price", null: false
+    t.string "times_to_teach", null: false
+    t.integer "rank_limit_id", null: false
+    t.text "appeal_point", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_coaches_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "coach_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coach_id"], name: "index_orders_on_coach_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "coach_id", null: false
+    t.integer "order_id", null: false
+    t.integer "rank_id", null: false
+    t.text "character", null: false
+    t.string "play_style"
+    t.string "play_time", null: false
+    t.text "play_device", null: false
+    t.text "communication_tool", null: false
+    t.text "goal", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coach_id"], name: "index_payments_on_coach_id"
+    t.index ["order_id"], name: "index_payments_on_order_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "coach_id", null: false
+    t.integer "payment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coach_id"], name: "index_rooms_on_coach_id"
+    t.index ["payment_id"], name: "index_rooms_on_payment_id"
+    t.index ["user_id"], name: "index_rooms_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -25,4 +79,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_11_052246) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "coaches", "users"
+  add_foreign_key "orders", "coaches"
+  add_foreign_key "orders", "users"
+  add_foreign_key "payments", "coaches"
+  add_foreign_key "payments", "orders"
 end
