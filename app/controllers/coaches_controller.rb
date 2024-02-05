@@ -1,6 +1,6 @@
 class CoachesController < ApplicationController
   before_action :set_coach, only: [:show, :edit, :update, :destroy]
-
+  protect_from_forgery :except => [:destroy]
 
   def index
     @coaches = Coach.order("created_at DESC")
@@ -20,6 +20,8 @@ class CoachesController < ApplicationController
   end
 
   def show
+    @comments = @coach.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def edit
@@ -48,7 +50,7 @@ class CoachesController < ApplicationController
   private
 
   def coach_params
-    params.require(:coach).permit(:rank_id, :kill_rate, {:character => []}, :play_time, {:play_device => []}, {:communication_tool => []}, :price, :times_to_teach, :rank_limit_id, :appeal_point).merge(user_id: current_user.id)
+    params.require(:coach).permit(:rank_id, :kill_rate, {:character => []}, :play_style, :play_time, {:play_device => []}, {:communication_tool => []}, :price, :times_to_teach, :rank_limit_id, :appeal_point).merge(user_id: current_user.id)
   end
 
   def set_coach

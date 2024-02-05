@@ -1,0 +1,10 @@
+.field {
+  padding-bottom: 30px;
+}
+
+.field input[type="text"], input[type="email"], input[type="password"]{
+  width: 150px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #ffaf80;
+}

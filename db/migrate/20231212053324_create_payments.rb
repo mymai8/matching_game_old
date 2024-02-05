@@ -5,7 +5,7 @@ class CreatePayments < ActiveRecord::Migration[6.0]
       t.references :order,              null: false, foreign_key: true
       t.integer    :rank_id,            null: false
       t.text       :character,          null: false
-      t.string     :play_style
+      t.string     :play_style,         null: false
       t.string     :play_time,          null: false
       t.text       :play_device,        null: false
       t.text       :communication_tool, null: false

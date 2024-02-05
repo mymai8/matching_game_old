@@ -42,10 +42,12 @@
               <%= f.check_box :character, {multiple: true}, "オクタン", nil %>オクタン<br>
               <%= f.check_box :character, {multiple: true}, "カタリスト", nil %>カタリスト<br>
               <%= f.check_box :character, {multiple: true}, "クリプト", nil %>クリプト<br>
+              <%= f.check_box :character, {multiple: true}, "コンジット", nil %>コンジット<br>
               <%= f.check_box :character, {multiple: true}, "コースティック", nil %>コースティック<br>
               <%= f.check_box :character, {multiple: true}, "シア", nil %>シア<br>
               <%= f.check_box :character, {multiple: true}, "ジブラルタル", nil %>ジブラルタル<br>
               <%= f.check_box :character, {multiple: true}, "ニューキャッスル", nil %>ニューキャッスル<br>
+              <%= f.check_box :character, {multiple: true}, "バリスティック", nil %>バリスティック<br>
               <%= f.check_box :character, {multiple: true}, "バンガロール", nil %>バンガロール<br>
               <%= f.check_box :character, {multiple: true}, "パスファインダー", nil %>パスファインダー<br>
               <%= f.check_box :character, {multiple: true}, "ヒューズ", nil %>ヒューズ<br>
@@ -69,6 +71,7 @@
         <div class="play-style">
           <div class="weight-bold-text">
             プレイスタイル
+            <span class="indispensable">必須</span>
           </div>
           <%= f.text_area :play_style, class:"play-style-text", id:"play-style", placeholder:"音の鳴る方へ" %>
         </div>
@@ -158,13 +161,13 @@
             アピールポイント
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :appeal_point, class:"appeal-point-text", id:"appeal-point", placeholder:"感度についてみっちり教えます", maxlength:"100" %>
+          <%= f.text_field :appeal_point, class: "appeal-point-text", id: "appeal-point", placeholder:"感度についてみっちり教えます", maxlength:"100" %>
         </div>
         <%# アピールポイント %>
 
         <div class="register-btn-contents">
-          <%= f.submit "登録する", method: :get, class:"register-btn" %>
-          <%=link_to 'やめる', root_path, class:"back-btn" %>
+          <%= f.submit "登録する", method: :get, class: "register-btn" %>
+          <%= link_to "やめる", root_path, class: "back-btn" %>
         </div>
       </div>
       <% end %>

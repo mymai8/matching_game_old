@@ -5,7 +5,7 @@ class CreateCoaches < ActiveRecord::Migration[6.0]
       t.integer    :rank_id,            null: false
       t.string     :kill_rate,          null: false
       t.text       :character,          null: false
-      t.string     :play_style
+      t.string     :play_style,         null: false
       t.string     :play_time,          null: false
       t.text       :play_device,        null: false
       t.text       :communication_tool, null: false
