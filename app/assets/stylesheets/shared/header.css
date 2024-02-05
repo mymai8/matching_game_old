@@ -17,8 +17,8 @@
 
 .matching-icon {
   position: absolute;
-  top: 10px;
-  width: 15vw;
+  padding-top: 10px;
+  width: 200px;
 }
 
 .nav {

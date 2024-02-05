@@ -1,0 +1,1 @@
+Payjp.api_key = 'sk_test_d0d0e718d7b91dfeb4a1ffd4'

@@ -28,4 +28,5 @@ class Rank < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :coaches
+  has_many :students
 end

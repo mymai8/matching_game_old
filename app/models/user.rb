@@ -8,5 +8,7 @@ class User < ApplicationRecord
   validates :game_name, presence: true
 
   has_many :coaches
+  has_many :students
   has_many :orders
+  has_many :comments
 end

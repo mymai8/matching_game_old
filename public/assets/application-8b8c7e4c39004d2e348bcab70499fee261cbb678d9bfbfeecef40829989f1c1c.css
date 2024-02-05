@@ -1,0 +1,773 @@
+.main {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  height: calc(100vh - 100px - 50px);
+  width: calc(100vw - 300px);
+  padding: 50px;
+  overflow: hidden scroll;
+}
+
+/* 共通 */
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  width: 150px;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+  margin-bottom: 5vh;
+}
+
+/* キルレート */
+.kill-rate {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* キャラクター */
+.select-character {
+  margin-left: 15px;
+  margin-bottom: 5vh;
+}
+
+/* プレイスタイル */
+.play-style-text {
+  height: 35px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* プレイ時間帯 */
+.play-time-text {
+  height: 35px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* プラットフォーム */
+.select-device {
+  margin-left: 10px;
+  margin-bottom: 5vh;
+}
+
+/* コミュニケーションツール */
+.select-tool {
+  margin-left: 10px;
+  margin-bottom: 5vh;
+}
+
+/* コーチング料金 */
+.price {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* コーチング回数 */
+.times-to-teach-text {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* 生徒のランク上限 */
+
+/* アピールポイント */
+.appeal-point-text {
+  height: 100px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* 登録ボタン */
+.btn {
+  display: flex;
+}
+
+.register-btn-contents {
+  font-size: 13px;
+  display: flex;
+}
+
+.register-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 100px;
+  padding: 5px;
+  margin-right: 20px;
+  font-size: 13px;
+}
+
+.back-btn {
+  border: 1px solid #a5a5a5;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  height: 33px;
+  width: 65px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+
+/* index */
+a {
+  text-decoration: none;
+}
+
+.coach-nickname {
+  color: black;
+  font-size: 24px;
+}
+
+.coaching-info {
+  color: black;
+  padding-left: 24px;
+}
+
+.coach-info {
+  padding: 25px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* show */
+.coaching-detail {
+  color: black;
+  padding-left: 24px;
+}
+
+.coach-edit-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 130px;
+  padding: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+
+.coach-destroy-btn {
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+  height: 33px;
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.coach-pay-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 115px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+.comments h4 {
+  padding-top: 30px;
+}
+
+.comment-form{
+  display: flex;
+}
+
+.comment-text{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.comment-submit{
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 115px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.comment{
+  display: flex;
+}
+
+.comment p{
+   margin: 0;
+}
+
+.user-info{
+  color: gray;
+  font-weight: bold;
+}
+.input-default {
+  width: 250px;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* カード情報の入力 */
+.credit-card-form {
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.info-input-haedline {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+.card-logo {
+  width: 40px;
+  margin: 5px 5px;
+}
+
+.input-expiration-date-wrap {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 55px;
+}
+
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
+
+.input-default {
+  height: 30px;
+  width: 400px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+}
+
+/* /カード情報の入力 */
+
+.goal-text {
+  height: 100px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+.buy-red-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 115px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.back-btn {
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+  height: 33px;
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.footer {
+  height: 50px;
+  width: 100vw;
+  padding: 2vh 0;
+  background-color: #FAFAFAFA;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+}
+.header {
+  background-color: #FAFAFA;
+  height: 100px;
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  position: fixed;
+  top: 0;
+}
+
+.logo {
+  width: 50%;
+  margin-left: 30px;
+}
+
+.matching-icon {
+  position: absolute;
+  padding-top: 10px;
+  width: 200px;
+}
+
+.nav {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+.user-nickname {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+.new-coach {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.logout {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+.side-bar {
+  background-color: #ffe9e0;
+  width: 300px;
+  height: calc(100vh - 100px - 50px);
+  position: fixed;
+  top: 100px;
+  left: 0;
+  overflow: hidden scroll;
+}
+
+.coach-title {
+  font-size: 32px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.coach-title a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.student-title {
+  font-size: 32px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.student-title a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.room-title {
+  font-size: 32px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.room-title a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.room {
+  padding: 10px;
+  text-align: center;
+}
+
+.room-name a {
+  text-decoration: none;
+  color: #000000;
+}
+.main {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  height: calc(100vh - 100px - 50px);
+  width: calc(100vw - 300px);
+  padding: 50px;
+  overflow: hidden scroll;
+}
+
+/* 共通 */
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  width: 150px;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+  margin-bottom: 5vh;
+}
+
+/* キルレート */
+.kill-rate {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* キャラクター */
+.select-character {
+  margin-left: 15px;
+  margin-bottom: 5vh;
+}
+
+/* プレイスタイル */
+.play-style-text {
+  height: 35px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* プレイ時間帯 */
+.play-time-text {
+  height: 35px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* プラットフォーム */
+.select-device {
+  margin-left: 10px;
+  margin-bottom: 5vh;
+}
+
+/* コミュニケーションツール */
+.select-tool {
+  margin-left: 10px;
+  margin-bottom: 5vh;
+}
+
+/* 予算 */
+.price {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* 希望コーチング回数 */
+.times-to-teach-text {
+  height: 35px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+
+/* 意気込み */
+.enthusiasm-text {
+  height: 100px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* 登録ボタン */
+.btn {
+  display: flex;
+}
+
+.register-btn-contents {
+  font-size: 13px;
+  display: flex;
+}
+
+.register-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 100px;
+  padding: 5px;
+  margin-right: 20px;
+  font-size: 13px;
+}
+
+.back-btn {
+  border: 1px solid #a5a5a5;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  height: 33px;
+  width: 65px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+
+/* index */
+a {
+  text-decoration: none;
+}
+
+.student-nickname {
+  color: black;
+  font-size: 24px;
+}
+
+.students-info {
+  color: black;
+  padding-left: 24px;
+}
+
+.student-info {
+  padding: 25px;
+  border-radius: 4px;
+  border: 1px solid #ffaf80;
+  resize: none;
+  margin-bottom: 5vh;
+}
+
+/* show */
+.students-detail {
+  color: black;
+  padding-left: 24px;
+}
+
+.student-edit-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 130px;
+  padding: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+
+.student-destroy-btn {
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+  height: 33px;
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.student-comment-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 115px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+.field {
+  padding-bottom: 30px;
+}
+
+.field input[type="text"], input[type="email"], input[type="password"]{
+  width: 150px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #ffaf80;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+* {font-family: 'Yomogi', cursive;}

@@ -36,7 +36,7 @@
 
 /* キルレート */
 .kill-rate {
-  height: 30px;
+  height: 35px;
   width: 150px;
   padding: 5px;
   border-radius: 4px;
@@ -54,7 +54,7 @@
 
 /* プレイスタイル */
 .play-style-text {
-  height: 30px;
+  height: 35px;
   width: 300px;
   padding: 5px;
   border-radius: 4px;
@@ -66,7 +66,7 @@
 
 /* プレイ時間帯 */
 .play-time-text {
-  height: 30px;
+  height: 35px;
   width: 300px;
   padding: 5px;
   border-radius: 4px;
@@ -90,7 +90,7 @@
 
 /* コーチング料金 */
 .price {
-  height: 30px;
+  height: 35px;
   width: 150px;
   padding: 5px;
   border-radius: 4px;
@@ -102,7 +102,7 @@
 
 /* コーチング回数 */
 .times-to-teach-text {
-  height: 30px;
+  height: 35px;
   width: 150px;
   padding: 5px;
   border-radius: 4px;
@@ -127,24 +127,36 @@
 }
 
 /* 登録ボタン */
+.btn {
+  display: flex;
+}
+
+.register-btn-contents {
+  font-size: 13px;
+  display: flex;
+}
+
 .register-btn {
   border: 1px solid #ffaf80;
   background-color: #ffe7dc;
   border-radius: 4px;
-  height: 30px;
+  height: 33px;
   width: 100px;
   padding: 5px;
+  margin-right: 20px;
+  font-size: 13px;
 }
 
 .back-btn {
   border: 1px solid #a5a5a5;
   background-color: #e0e0e0;
   border-radius: 4px;
-  height: 30px;
-  width: 100px;
-  padding: 2px;
+  height: 33px;
+  width: 65px;
+  padding: 5px;
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 
 
@@ -175,4 +187,43 @@ a {
 .coaching-detail {
   color: black;
   padding-left: 24px;
+}
+
+.coach-edit-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 130px;
+  padding: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+
+.coach-destroy-btn {
+  border: 1px solid #a5a5a5;
+  border-radius: 4px;
+  height: 33px;
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.coach-pay-btn {
+  border: 1px solid #ffaf80;
+  background-color: #ffe7dc;
+  border-radius: 4px;
+  height: 33px;
+  width: 115px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
 }
